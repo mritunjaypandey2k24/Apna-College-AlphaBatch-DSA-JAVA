@@ -8,10 +8,15 @@ public class max_subarray_sum_kadanes_algorithm {
         for (int i = 0; i < num.length; i++) {
 
             currSum = currSum + num[i];
+            
+            maxSum = Math.max(currSum , maxSum); 
+            //writing above line before making the currsum = 0; This ensures that the maxsum get the value of currsum even if it negative
+            // eg for test case num = [-1]
+            //with this approach we can get the maxsum = -1
+
             if (currSum < 0){
                 currSum = 0;
             }
-            maxSum = Math.max(currSum , maxSum);
             System.out.println(maxSum);
         }
         System.out.println("Max sum is : " + maxSum);
