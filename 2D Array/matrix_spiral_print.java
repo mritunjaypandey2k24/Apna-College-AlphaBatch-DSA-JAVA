@@ -9,37 +9,36 @@ public class matrix_spiral_print{
       while(startRow <= endRow && startCol <= endCol ){
 
         //printing top part
-        for(int i = startCol; i <= endCol;i++){
-            System.out.print(matrix[startRow][i]+" ");
+        for(int j = startCol; j <= endCol;j++){
+            System.out.print(matrix[startRow][j]+" ");
         }
+          startRow++;
 
         // printint right side part
-        for(int i =startRow+1; i<=endRow; i++){
+        for(int i =startRow; i<=endRow; i++){
             System.out.print(matrix[i][endCol]+" ");
         }
+          endCol--;
 
         // printing bottom part
-        for(int i = endRow-1; i >= startRow; i--){
-            if(startCol == endCol){
-                break;
-           }
-            System.out.print(matrix[endCol][i]+" ");
-        }
+          if(startRow != endRow){
+            for(int j = endCol; j >= startCol; j--){
+                
+                System.out.print(matrix[endRow][j]+" ");
+            }
+              endRow--;
+          }
 
         // printing left side part
-        for(int i = endRow-1; i>= startRow+1; i--){
-            if(startRow == endRow){
-                 break;
+          if(startCol != endCol){
+            for(int i = endRow; i>= startRow; i--){
+                System.out.print(matrix[i][startCol]+" ");
             }
-            System.out.print(matrix[i][startCol]+" ");
-        }
+              startCol++;
+          }
 
-        startRow++;
-        startCol++;
-        endRow--;
-        endCol--;
+       
 
-        System.out.println();
       }
 
     }
