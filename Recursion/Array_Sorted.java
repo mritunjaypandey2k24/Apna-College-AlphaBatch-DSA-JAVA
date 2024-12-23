@@ -11,7 +11,7 @@ public class Array_Sorted {
     // here i is the position from which we are going to check is the array is sorted or not
     public static boolean isSorted(int arr[], int i){
 
-        if(arr[i] <= arr[arr.length-1]){
+        if(i == arr.length-1){
             return true;
         }
         
