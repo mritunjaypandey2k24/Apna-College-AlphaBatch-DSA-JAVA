@@ -26,7 +26,7 @@ public class insert_sorting {
 
                 System.out.print(array[j]+" "); 
             }
-            System.out.print("------");
+            System.out.print("------"+i);
         }
     }
 
