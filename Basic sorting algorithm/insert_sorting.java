@@ -34,7 +34,7 @@ public class insert_sorting {
 
     public static void main(String args []){
 
-        int array []= {1,2,3,5,4};
+        int array []= {5,3,2,1,4};
         for (int j = 0; j < array.length; j++) {
 
             System.out.print(array[j]+" "); 
