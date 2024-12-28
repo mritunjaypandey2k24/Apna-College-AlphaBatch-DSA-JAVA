@@ -11,15 +11,15 @@ public class Optimised_x_to_the_power_n {
             return x;
         }
 
-        int ans = power(x,n/2);
-        int ansSq = ans*ans;
+        int ans = power(x,n/2)* powe(x,n/2);
+        //int ansSq = ans*ans;
 
         //for odd
         if(n%2 != 0){
             ansSq = x*ansSq;
         }
         
-        return ansSq;
+        return ans;
     }
 
 }
