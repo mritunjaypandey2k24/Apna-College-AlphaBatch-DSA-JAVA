@@ -55,7 +55,7 @@ class Student{
     //     this.marks = s1.marks;
     // }
 
-    // function for deep fry
+    // function for deep copy
 
     Student(Student s1){
         marks = new int[2];
